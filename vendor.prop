@@ -5,7 +5,7 @@ bluetooth.device.default_name=Moto G⁹ Plus
 ro.config.avoid_gfx_accel=true
 
 # Cached app compaction
-persist.device_config.activity_manager.use_compacmtion=true
+persist.device_config.activity_manager.use_compaction=true
 
 # Brightness curve
 persist.sys.brightness.low.gamma=true
@@ -15,11 +15,3 @@ persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Disable Async MTE
 arm64.memtag.process.system_server=off
-
-# Disable CPU vsync
-debug.cpurend.vsync=false
-
-# SkiaGL Threaded
-debug.renderengine.backend=skiaglthreaded
-debug.hwui.renderer=skiagl
-renderthread.skia.reduceopstasksplitting=true 
