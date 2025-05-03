@@ -119,10 +119,6 @@ PRODUCT_COPY_FILES += \
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# ART lowmem config
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.art_lowmem=true
-
 # AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
 
@@ -246,7 +242,6 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
-PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -258,9 +253,6 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
-# Reduce SystemServer Debug
-PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
 # Updater
 PRODUCT_PROPERTY_OVERRIDES += \
