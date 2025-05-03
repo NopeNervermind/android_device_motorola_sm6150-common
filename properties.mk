@@ -363,6 +363,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.sensors.enable.mag_filter=true
 
+# SIM
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.multisim.simslotcount=2 \
+    persist.radio.multisim.config=dsds
+
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
